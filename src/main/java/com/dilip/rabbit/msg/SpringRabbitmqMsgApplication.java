@@ -7,7 +7,7 @@ import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@EnableRabbit // seems like this is not needed
+@EnableRabbit // seems like this is not needed
 @SpringBootApplication
 public class SpringRabbitmqMsgApplication {
 
