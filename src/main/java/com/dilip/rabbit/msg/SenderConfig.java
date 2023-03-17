@@ -9,21 +9,21 @@ import org.springframework.context.annotation.Configuration;
 public class SenderConfig {
 	
 	@Value("${rabbitmq.queue.name}")
-	private String message;
+	private String queueName; //teste-DCH-Test3
 	
 	@Value("${rabbitmq.queue2.name}")
-	private String message2;
+	private String queueName2; //teste2
 	
 	@Bean
 	public Queue queue() {
-		System.out.println("Queue "+ this.message + " is getting set...");
-		return new Queue(this.message, true);
+		System.out.println("Queue "+ this.queueName + " is getting set...");
+		return new Queue(this.queueName, true);
 	}
 	
 	@Bean
 	public Queue queueSecond() {
-		System.out.println("Queue "+ this.message2 + " is getting set...");
-		return new Queue(this.message2, true);
+		System.out.println("Queue "+ this.queueName2 + " is getting set...");
+		return new Queue(this.queueName2, true);
 	}
 	
 }

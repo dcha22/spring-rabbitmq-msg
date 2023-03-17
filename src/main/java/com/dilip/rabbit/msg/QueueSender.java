@@ -19,12 +19,12 @@ public class QueueSender {
 	private Queue queueSecond;
 
 	// This will send the given message to the given queue in RabbitMQ
-	public void send(String order) throws InterruptedException {
-		rabbitTemplate.convertAndSend(this.queue.getName(), order);
+	public void send(String msg) throws InterruptedException {
+		rabbitTemplate.convertAndSend(this.queue.getName(), msg);
 	}
 
 	// This will send the given message to the given queue in RabbitMQ
-	public void send2(String order) throws InterruptedException {
-		rabbitTemplate.convertAndSend(this.queueSecond.getName(), order);
+	public void send2(String msg) throws InterruptedException {
+		rabbitTemplate.convertAndSend(this.queueSecond.getName(), msg);
 	}
 }
